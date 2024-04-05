@@ -1,12 +1,12 @@
-# electron-react
+# Electron-React
 
-An Electron application with React
+Una aplicacion de escritorio con Electron y React.
 
-## Recommended IDE Setup
+Para iniciar el proyecto usé el comando brindado en su [pagina web](https://electron-vite.org/guide/#scaffolding-your-first-electron-vite-project)
 
-- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
-## Project Setup
+
+## Configuración
 
 ### Install
 

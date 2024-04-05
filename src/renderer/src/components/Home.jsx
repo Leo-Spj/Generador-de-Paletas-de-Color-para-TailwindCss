@@ -1,8 +1,10 @@
 import ColorPicker from "./ColorPicker";
+import ExportCode from "./ExportCode";
 
 function Home() {
   return (
     <>
+
 
       <body className="bg-gray-100">
         <div className="min-h-screen flex flex-col items-center justify-center">
@@ -19,7 +21,9 @@ function Home() {
 
             <div className="flex justify-center">
               <div className="flex justify-end space-x-2 mb-6">
-                <button className="text-sm text-gray-500">Exportar</button>
+
+                <ExportCode />
+
               </div>
             </div>
 

@@ -19,9 +19,7 @@ function Home() {
 
             <div className="flex justify-center">
               <div className="flex justify-end space-x-2 mb-6">
-                <button className="text-sm text-gray-500">Export</button>
-                <button className="text-sm text-gray-500">Edit</button>
-                <button className="text-sm text-gray-500">Save</button>
+                <button className="text-sm text-gray-500">Exportar</button>
               </div>
             </div>
 

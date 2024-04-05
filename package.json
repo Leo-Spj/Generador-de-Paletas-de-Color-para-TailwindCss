@@ -20,7 +20,9 @@
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.0",
     "@electron-toolkit/utils": "^3.0.0",
-    "react-color": "^2.19.3"
+    "react-color": "^2.19.3",
+    "react-json-view": "^1.21.3",
+    "react-popover": "^0.5.10"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config": "^1.0.2",

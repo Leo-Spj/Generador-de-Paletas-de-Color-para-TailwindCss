@@ -1,4 +1,4 @@
-import Home from "./components/home"
+import Home from "./components/Home"
 import Examples from "./components/Examples"
 
 function App() {

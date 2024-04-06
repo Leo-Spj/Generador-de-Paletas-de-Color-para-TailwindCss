@@ -11,7 +11,7 @@ function ColorPicker() {
     a: '0',
   });
 
-  const [hexColor, setHexColor] = useState('#82BD69'); // Nuevo estado para el color hexadecimal
+  const [hexColor, setHexColor] = useState('82BD69'); // Nuevo estado para el color hexadecimal sin '#'
 
   const handleClick = () => {
     setDisplayColorPicker(!displayColorPicker);
@@ -23,23 +23,27 @@ function ColorPicker() {
 
   const handleChange = (color) => {
     setColor(color.rgb);
-    setHexColor(color.hex); // Actualiza el color hexadecimal cuando el color cambia
+    setHexColor(color.hex.replace('#', '')); // Actualiza el color hexadecimal sin '#'
   };
 
   const handleInputChange = (event) => {
-    setHexColor(event.target.value);
+    const inputValue = event.target.value.replace('#', '');
+    if (inputValue.length <= 6) { // Solo actualiza hexColor si inputValue tiene 6 caracteres o menos
+      setHexColor(inputValue);
+    }
   };
 
   useEffect(() => {
-    // Convierte el color hexadecimal a RGB cuando el valor del input cambia
-    const rgbColor = hexToRgb(hexColor);
-    if (rgbColor) {
-      setColor(rgbColor);
+    if (hexColor.length === 6) { // Solo aplica el color cuando hexColor tiene 6 caracteres
+      const rgbColor = hexToRgb(hexColor);
+      if (rgbColor) {
+        setColor(rgbColor);
+      }
     }
   }, [hexColor]);
 
   const hexToRgb = (hex) => {
-    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    const result = /^([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result ? {
       r: parseInt(result[1], 16),
       g: parseInt(result[2], 16),
@@ -95,7 +99,7 @@ function ColorPicker() {
           </div> : null}
         </div>
 
-        <input type="text" className="outline-none text-center ml-4" value={hexColor} onChange={handleInputChange} />
+        <input type="text" className="outline-none text-center ml-4" value={`#${hexColor}`} onChange={handleInputChange} />
 
         <div className="ml-4 text-sm text-gray-500 p-4">HEX <i className="fas fa-chevron-down"></i></div>
       </div>

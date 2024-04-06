@@ -68,8 +68,8 @@ function ColorPicker() {
       popover: {
         position: 'absolute',
         zIndex: '2',
-        marginTop: '360px',
-        marginLeft: '-90px',
+        marginTop: '330px',
+        marginLeft: '-210px',
       },
       cover: {
         position: 'fixed',

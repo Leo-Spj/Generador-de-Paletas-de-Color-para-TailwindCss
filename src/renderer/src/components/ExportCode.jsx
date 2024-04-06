@@ -16,7 +16,8 @@ const colorData = {
   '950': '#3c1613',
 };
 
-const buttons = ['Tailwind (HEX)', 'Tailwind (OKLCH)', 'Tailwind (HSL)', 'SCSS (HEX)', 'CSS (HEX)', 'CSS (RGB)', 'SVG (Figma)'];
+const buttons = ['Tailwind (HEX)'];
+// , 'Tailwind (OKLCH)', 'Tailwind (HSL)', 'SCSS (HEX)', 'CSS (HEX)', 'CSS (RGB)', 'SVG (Figma)'
 
 const theme = {
   base00: "#f3f4f6",

@@ -20,9 +20,9 @@ function generarGamaDeColores(colorHex, numeroTonos) {
       let nuevoB = Math.round(b - (pasoB * i));
 
       // Convertir los valores RGB a formato hexadecimal
-      let nuevoColorHex = '#' + nuevoR.toString(16).padStart(2, '0') +
-                                nuevoG.toString(16).padStart(2, '0') +
-                                nuevoB.toString(16).padStart(2, '0');
+      let nuevoColorHex = nuevoR.toString(16).padStart(2, '0') +
+                          nuevoG.toString(16).padStart(2, '0') +
+                          nuevoB.toString(16).padStart(2, '0');
 
       // Agregar el nuevo color a la gama
       gamaColores.push(nuevoColorHex);

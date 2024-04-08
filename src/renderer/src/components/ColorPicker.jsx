@@ -2,8 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { SketchPicker } from 'react-color';
 import reactCSS from 'reactcss';
 
+import ExportCode from "./ExportCode";
+import PaletaColor from "./PaletaColor";
+
+import generarGamaDeColores from "./AlgoritmoColorimetrico";
+
 function ColorPicker() {
   const [displayColorPicker, setDisplayColorPicker] = useState(false);
+
+
   const [color, setColor] = useState({
     r: '0',
     g: '0',
@@ -33,14 +40,6 @@ function ColorPicker() {
     }
   };
 
-  useEffect(() => {
-    if (hexColor.length === 6) { // Solo aplica el color cuando hexColor tiene 6 caracteres
-      const rgbColor = hexToRgb(hexColor);
-      if (rgbColor) {
-        setColor(rgbColor);
-      }
-    }
-  }, [hexColor]);
 
   const hexToRgb = (hex) => {
     const result = /^([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -51,6 +50,19 @@ function ColorPicker() {
       a: '1',
     } : null;
   };
+
+  const [paleta, setPaleta] = useState([]); // Nuevo estado para la paleta de colores
+
+  useEffect(() => {
+    if (hexColor.length === 6) { // Solo aplica el color cuando hexColor tiene 6 caracteres
+      const rgbColor = hexToRgb(hexColor);
+      if (rgbColor) {
+        setColor(rgbColor);
+        const nuevaPaleta = generarGamaDeColores(`#${hexColor}`, 11); // Genera la nueva paleta de colores
+        setPaleta(nuevaPaleta); // Actualiza el estado de la paleta de colores
+      }
+    }
+  }, [hexColor]);
 
   const styles = reactCSS({
     'default': {
@@ -86,24 +98,40 @@ function ColorPicker() {
   });
 
   return (
-    <div className="flex items-center justify-center mb-12">
-      <div className="bg-white rounded-full p-2 shadow-lg flex items-center justify-between">
+    <>
+      <div className="flex items-center justify-center mb-12">
+        <div className="bg-white rounded-full p-2 shadow-lg flex items-center justify-between">
 
-        <div className="flex items-center">
-          <div style={styles.swatch} onClick={handleClick}>
-            <div style={styles.color} />
+          <div className="flex items-center">
+            <div style={styles.swatch} onClick={handleClick}>
+              <div style={styles.color} />
+            </div>
+            {displayColorPicker ? <div style={styles.popover}>
+              <div style={styles.cover} onClick={handleClose} />
+              <SketchPicker color={color} onChange={handleChange} />
+            </div> : null}
           </div>
-          {displayColorPicker ? <div style={styles.popover}>
-            <div style={styles.cover} onClick={handleClose} />
-            <SketchPicker color={color} onChange={handleChange} />
-          </div> : null}
+
+          <input type="text" className="outline-none text-center ml-4" value={`#${hexColor}`} onChange={handleInputChange} />
+
+          <div className="ml-4 text-sm text-gray-500 p-4">HEX <i className="fas fa-chevron-down"></i></div>
+        </div>
+      </div>
+
+      <div className="w-full px-6">
+
+        <div className="flex justify-center">
+          <div className="flex justify-end space-x-2 mb-6">
+
+            <ExportCode colors={paleta} />
+
+          </div>
         </div>
 
-        <input type="text" className="outline-none text-center ml-4" value={`#${hexColor}`} onChange={handleInputChange} />
 
-        <div className="ml-4 text-sm text-gray-500 p-4">HEX <i className="fas fa-chevron-down"></i></div>
+        <PaletaColor colors={paleta} />
       </div>
-    </div>
+    </>
   );
 }
 

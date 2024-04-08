@@ -2,19 +2,6 @@ import React, { useState } from 'react';
 import ReactJson from 'react-json-view';
 import Popover from 'react-popover';
 
-const colorData = {
-  '50': '#fcf5f4',
-  '100': '#fae8e6',
-  '200': '#f6d5d2',
-  '300': '#efb7b2',
-  '400': '#e48d85',
-  '500': '#d6675d',
-  '600': '#c4544a',
-  '700': '#a23c33',
-  '800': '#86352e',
-  '900': '#70322c',
-  '950': '#3c1613',
-};
 
 const buttons = ['Tailwind (HEX)'];
 // , 'Tailwind (OKLCH)', 'Tailwind (HSL)', 'SCSS (HEX)', 'CSS (HEX)', 'CSS (RGB)', 'SVG (Figma)'
@@ -38,12 +25,27 @@ const theme = {
   base0F: "rgba(70, 70, 230, 1)"
 };
 
-function ExportCode() {
+function ExportCode({colors}) {
+
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
 
   const togglePopover = () => {
     setIsPopoverOpen(!isPopoverOpen);
   }
+
+  let colorData = {
+    '50': `#${colors[0]}`,
+    '100': `#${colors[1]}`,
+    '200': `#${colors[2]}`,
+    '300': `#${colors[3]}`,
+    '400': `#${colors[4]}`,
+    '500': `#${colors[5]}`,
+    '600': `#${colors[6]}`,
+    '700': `#${colors[7]}`,
+    '800': `#${colors[8]}`,
+    '900': `#${colors[9]}`,
+    '950': `#${colors[10]}`
+  };
 
   return (
     <Popover

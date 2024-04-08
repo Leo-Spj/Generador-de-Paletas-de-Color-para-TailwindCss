@@ -11,7 +11,7 @@ function ColorPicker() {
     a: '0',
   });
 
-  const [hexColor, setHexColor] = useState('82BD69'); // Nuevo estado para el color hexadecimal sin '#'
+  const [hexColor, setHexColor] = useState('22C55E'); // Nuevo estado para el color hexadecimal sin '#'
 
   const handleClick = () => {
     setDisplayColorPicker(!displayColorPicker);

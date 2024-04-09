@@ -1,34 +1,36 @@
 # Electron-React
 
-Una aplicacion de escritorio con Electron y React.
+Crea paletas de colores y exportalas para Tailwind (Hex). Creada con Electron y React.
 
-Para iniciar el proyecto usé el comando brindado en su [pagina web](https://electron-vite.org/guide/#scaffolding-your-first-electron-vite-project)
+
+![Electron-React](./assets/image.png)
+Para iniciar este proyecto usé [esta documentación.](https://electron-vite.org/guide/#scaffolding-your-first-electron-vite-project)
 
 
 
 ## Configuración
 
-### Install
+### Instalación
 
 ```bash
-$ npm install
+$ npm install -f
 ```
 
-### Development
+### Desarrollo
 
 ```bash
 $ npm run dev
 ```
 
-### Build
+### Compilación
 
 ```bash
-# For windows
+# Para windows
 $ npm run build:win
 
-# For macOS
+# Para macOS
 $ npm run build:mac
 
-# For Linux
+# Para Linux
 $ npm run build:linux
 ```

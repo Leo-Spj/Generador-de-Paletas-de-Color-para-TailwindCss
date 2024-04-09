@@ -1,4 +1,4 @@
-# Electron-React
+# Generador de Paletas de Color
 
 Crea paletas de colores y exportalas para Tailwind (Hex). Creada con Electron y React.
 

@@ -6,6 +6,7 @@ import ExportCode from "./ExportCode";
 import PaletaColor from "./PaletaColor";
 
 import generarGamaDeColores from "./AlgoritmoColorimetrico";
+import Examples from './Examples';
 
 function ColorPicker() {
   const [displayColorPicker, setDisplayColorPicker] = useState(false);
@@ -18,7 +19,7 @@ function ColorPicker() {
     a: '0',
   });
 
-  const [hexColor, setHexColor] = useState('22C55E'); // Nuevo estado para el color hexadecimal sin '#'
+  const [hexColor, setHexColor] = useState('8fd946'); // Nuevo estado para el color hexadecimal sin '#'
 
   const handleClick = () => {
     setDisplayColorPicker(!displayColorPicker);
@@ -99,38 +100,44 @@ function ColorPicker() {
 
   return (
     <>
-      <div className="flex items-center justify-center mb-12">
-        <div className="bg-white rounded-full p-2 shadow-lg flex items-center justify-between">
+      <div className=''>
 
-          <div className="flex items-center">
-            <div style={styles.swatch} onClick={handleClick}>
-              <div style={styles.color} />
+
+        <div className="flex items-center justify-center mb-12">
+          <div className="bg-white rounded-full p-2 shadow-lg flex items-center justify-between">
+
+            <div className="flex items-center">
+              <div style={styles.swatch} onClick={handleClick}>
+                <div style={styles.color} />
+              </div>
+              {displayColorPicker ? <div style={styles.popover}>
+                <div style={styles.cover} onClick={handleClose} />
+                <SketchPicker color={color} onChange={handleChange} />
+              </div> : null}
             </div>
-            {displayColorPicker ? <div style={styles.popover}>
-              <div style={styles.cover} onClick={handleClose} />
-              <SketchPicker color={color} onChange={handleChange} />
-            </div> : null}
-          </div>
 
-          <input type="text" className="outline-none text-center ml-4" value={`#${hexColor}`} onChange={handleInputChange} />
+            <input type="text" className="outline-none text-center ml-4" value={`#${hexColor}`} onChange={handleInputChange} />
 
-          <div className="ml-4 text-sm text-gray-500 p-4">HEX <i className="fas fa-chevron-down"></i></div>
-        </div>
-      </div>
-
-      <div className="w-full px-6">
-
-        <div className="flex justify-center">
-          <div className="flex justify-end space-x-2 mb-6">
-
-            <ExportCode colors={paleta} />
-
+            <div className="ml-4 text-sm text-gray-500 p-4">HEX <i className="fas fa-chevron-down"></i></div>
           </div>
         </div>
 
+        <div className="w-full px-6">
 
-        <PaletaColor colors={paleta} />
+          <div className="flex justify-center">
+            <div className="flex justify-end space-x-2 mb-6">
+
+              <ExportCode paleta={paleta} />
+
+            </div>
+          </div>
+
+
+          <PaletaColor paleta={paleta} />
+        </div>
+      <Examples paleta={paleta}/>
       </div>
+
     </>
   );
 }

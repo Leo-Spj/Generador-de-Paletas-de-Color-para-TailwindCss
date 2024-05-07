@@ -1,95 +1,99 @@
-function Examples() {
+import determinarOscuro from "./DeterminarOscuro"
+
+function Examples({ paleta }) {
+
+  const daysOfWeek = ['mo', 'tu', 'we', 'th', 'fr', 'sa', 'su'];
+  const daysOfMonth = Array.from({ length: 31 }, (_, i) => i + 1);
+
   return (
     <>
-      <body className="bg-gray-100">
+      <body className="bg-g</body>ray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <h2 className="text-2xl font-semibold text-gray-900">
             Ejemplos
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+
+
+
             {/* <!-- Card 1 --> */}
-            <div className="bg-green-500 rounded-xl p-6 text-white">
-              <div className="text-sm uppercase">
+            <div style={{ backgroundColor: `#${paleta[0]}` }} className="rounded-xl p-6 text-white">
+              <div className="text-sm uppercase" style={{ color: determinarOscuro(`#${paleta[0]}`) ? "#ffffff" : "#000000" }}>
                 Clientela
               </div>
-              <div className="text-6xl font-bold mt-2">
+              <div className="text-6xl font-bold mt-2" style={{ color: determinarOscuro(`#${paleta[0]}`) ? "#ffffff" : "#000000" }}>
                 1.553
                 <i className="fas fa-arrow-up">
                 </i>
               </div>
-              <div className="text-sm mt-2">
+              <div className="text-sm mt-2" style={{ color: determinarOscuro(`#${paleta[0]}`) ? "#ffffff" : "#000000" }}>
                 Nuevos clientes en los últimos 30 días
               </div>
             </div>
+
+
             {/* <!-- Card 2 --> */}
-            <div className="bg-white rounded-xl p-6 shadow">
-              <div className="text-sm uppercase">
-                Calendario
+            <div class="bg-white p-8 rounded-lg shadow">
+              <div class="font-bold text-gray-700">
+                Calendar
               </div>
-              <div className="grid grid-cols-7 gap-1 text-center text-sm mt-4">
-                <div>
-                  Mo
-                </div>
-                <div>
-                  Tu
-                </div>
-                <div>
-                  No
-                </div>
-                <div>
-                  Fr
-                </div>
-                <div>
-                  Sa
-                </div>
-                <div>
-                  Su
-                </div>
-                <div className="col-span-7 border-t mt-2 pt-2">
-                  <button className="bg-green-500 text-white rounded-md px-4 py-2 text-sm">
-                    Continuar
-                  </button>
-                </div>
+              <div class="grid grid-cols-7 gap-1 text-center text-sm py-4">
+
+                {daysOfWeek.map(day => (
+                  <div key={day}>{day}</div>
+                ))}
+
+                <div class="col-span-7 border-t mt-2"></div>
+
+                {daysOfMonth.map(day => (
+                  <div key={day} class={day === 1 ? "col-start-2" : ""}>{day}</div>
+                ))}
+
               </div>
+
+              <div className="col-span-7 border-t mt-2"></div>
+
+              <button style={{ backgroundColor: `#${paleta[2]}` }} class="mt-4 px-4 py-2 rounded hover:bg-orange-300 transition duration-300">
+                Continue
+              </button>
             </div>
+
+
+
             {/* <!-- Card 3 --> */}
-            <div className="bg-white rounded-xl p-6 shadow">
-              <div className="text-sm uppercase">
-                Hoy
-              </div>
-              <div className="mt-4">
-                <div className="flex justify-between items-center">
-                  <div className="text-sm">
-                    Reunión del sistema de diseño
+
+            <div class="bg-white p-8 rounded-lg shadow">
+              <div class="font-bold text-xl mb-2">Today</div>
+              <div class="space-y-4">
+                <div style={{ backgroundColor: `#${paleta[2]}` }} class=" p-4 rounded-lg flex justify-between items-center relative">
+                  <div class="absolute left-0 top-0 bottom-0 w-1" style={{ backgroundColor: `#${paleta[7]}` }}></div>
+                  <div class="pl-4">
+                    <div class="font-semibold">Design system meeting</div>
+                    <div class="text-gray-700 text-sm">9 - 10 AM</div>
                   </div>
-                  <i className="fas fa-ellipsis-h text-gray-400">
-                  </i>
+                  <i class="fas fa-ellipsis-h text-gray-600"></i>
                 </div>
-                <div className="text-xs text-gray-500">
-                  9 - 10 AM
-                </div>
-                <div className="flex justify-between items-center mt-4">
-                  <div className="text-sm">
-                    Almuerzo
+
+                <div style={{ backgroundColor: `#${paleta[2]}` }} class=" p-4 rounded-lg flex justify-between items-center relative">
+                  <div class="absolute left-0 top-0 bottom-0 w-1" style={{ backgroundColor: `#${paleta[7]}` }}></div>
+                  <div class="pl-4">
+                    <div class="font-semibold">Lunch</div>
+                    <div class="text-gray-700 text-sm">1 - 2 PM</div>
                   </div>
-                  <i className="fas fa-ellipsis-h text-gray-400">
-                  </i>
+                  <i class="fas fa-ellipsis-h text-gray-600"></i>
                 </div>
-                <div className="text-xs text-gray-500">
-                  1 - 2 PM
-                </div>
-                <div className="flex justify-between items-center mt-4">
-                  <div className="text-sm">
-                    Revisión del diseño
+                <div style={{ backgroundColor: `#${paleta[2]}` }} class=" p-4 rounded-lg flex justify-between items-center relative">
+                  <div class="absolute left-0 top-0 bottom-0 w-1" style={{ backgroundColor: `#${paleta[7]}` }}></div>
+                  <div class="pl-4">
+                    <div class="font-semibold">Design review</div>
+                    <div class="text-gray-700 text-sm">3 - 4 PM</div>
                   </div>
-                  <i className="fas fa-ellipsis-h text-gray-400">
-                  </i>
+                  <i class="fas fa-ellipsis-h text-gray-600"></i>
                 </div>
-                <div className="text-xs text-gray-500">
-                  3 - 4 PM
-                </div>
+
               </div>
             </div>
+
 
           </div>
         </div>

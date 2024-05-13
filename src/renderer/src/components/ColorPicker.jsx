@@ -19,7 +19,10 @@ function ColorPicker() {
     a: '0',
   });
 
-  const [hexColor, setHexColor] = useState('8fd946'); // Nuevo estado para el color hexadecimal sin '#'
+  const [hexColor, setHexColor] = useState(() => {
+      let color = Math.floor(Math.random()*16777215).toString(16);
+      return color.padStart(6, '0'); // Asegura que el color tenga 6 dígitos
+  });
 
   const handleClick = () => {
     setDisplayColorPicker(!displayColorPicker);
@@ -134,8 +137,11 @@ function ColorPicker() {
 
 
           <PaletaColor paleta={paleta} />
+
         </div>
+
       <Examples paleta={paleta}/>
+
       </div>
 
     </>

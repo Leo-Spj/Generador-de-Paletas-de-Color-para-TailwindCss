@@ -7,7 +7,7 @@ function Examples({ paleta }) {
 
   return (
     <>
-      <body className="bg-g</body>ray-100">
+      <body className="">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <h2 className="text-2xl font-semibold text-gray-900">
             Ejemplos
@@ -17,7 +17,7 @@ function Examples({ paleta }) {
 
 
             {/* <!-- Card 1 --> */}
-            <div style={{ backgroundColor: `#${paleta[0]}` }} className="rounded-xl p-6 text-white">
+            <div style={{ backgroundColor: `#${paleta[0]}` }} className="rounded-lg shadow p-6 text-white">
               <div className="text-sm uppercase" style={{ color: determinarOscuro(`#${paleta[0]}`) ? "#ffffff" : "#000000" }}>
                 Clientela
               </div>
@@ -53,7 +53,7 @@ function Examples({ paleta }) {
 
               <div className="col-span-7 border-t mt-2"></div>
 
-              <button style={{ backgroundColor: `#${paleta[2]}` }} class="mt-4 px-4 py-2 rounded hover:bg-orange-300 transition duration-300">
+              <button style={{ backgroundColor: `#${paleta[2]}` , color: determinarOscuro(`#${paleta[0]}`) ? "#ffffff" : "#000000"  }} class="mt-4 px-4 py-2 rounded hover:bg-orange-300 transition duration-300">
                 Continue
               </button>
             </div>
@@ -62,13 +62,13 @@ function Examples({ paleta }) {
 
             {/* <!-- Card 3 --> */}
 
-            <div class="bg-white p-8 rounded-lg shadow">
+            <div class="bg-white p-8 rounded-lg shadow text-left">
               <div class="font-bold text-xl mb-2">Today</div>
               <div class="space-y-4">
                 <div style={{ backgroundColor: `#${paleta[2]}` }} class=" p-4 rounded-lg flex justify-between items-center relative">
                   <div class="absolute left-0 top-0 bottom-0 w-1" style={{ backgroundColor: `#${paleta[7]}` }}></div>
                   <div class="pl-4">
-                    <div class="font-semibold">Design system meeting</div>
+                    <div class="font-semibold" style={{ color: determinarOscuro(`#${paleta[0]}`) ? "#ffffff" : "#000000" }}>Design system meeting</div>
                     <div class="text-gray-700 text-sm">9 - 10 AM</div>
                   </div>
                   <i class="fas fa-ellipsis-h text-gray-600"></i>

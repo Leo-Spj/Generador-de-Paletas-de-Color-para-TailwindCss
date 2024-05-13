@@ -1,17 +1,17 @@
 function determinarOscuro(colorHex) {
-  // hexadecimal a RGB
-  const r = parseInt(colorHex.substr(1, 2), 16) / 255;
-  const g = parseInt(colorHex.substr(3, 2), 16) / 255;
-  const b = parseInt(colorHex.substr(5, 2), 16) / 255;
 
-  // Encuentra el valor RGB lineal para cada componente
-  const linear = (c) => c > 0.03928 ? Math.pow(((c + 0.055) / 1.055), 2.4) : c / 12.92;
+  // hexadecimal a RGB. RGB es de 0 a 255 - decimal
+  const r = parseInt(colorHex.substr(1, 2), 16); // el 16 es la base, por tanto al hacer el parseint se convierte a decimal
+  const g = parseInt(colorHex.substr(3, 2), 16);
+  const b = parseInt(colorHex.substr(5, 2), 16);
 
-  // Obtiene la luminancia relativa
-  const luminance = 0.2126 * linear(r) + 0.7152 * linear(g) + 0.0722 * linear(b);
+  // Calcula el brillo del color
+  const brillo = (r * 299 + g * 587 + b * 114) / 1000;
+  // Esta es una formula simplificada de la formula de brillo de YIQ
+  // https://es.planetcalc.com/7779/
 
-  // Retorna si el color es oscuro o no
-  if (luminance < 0.5) {
+  // Determina si el color es oscuro o no
+  if (brillo < 128) {
     return true;
   } else {
     return false;

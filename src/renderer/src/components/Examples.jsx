@@ -113,17 +113,17 @@ function Examples({ paleta }) {
 
 
             {/* <!-- Card 5 --> */}
-            <div style={{ backgroundColor: `#${paleta[0]}` }} className="rounded-lg shadow p-6 border border-gray-200">
+            <div style={{ backgroundColor: `#${paleta[10]}` }} className="rounded-lg shadow p-6 border border-gray-200">
               <div className="flex items-center">
-                <i className="fas fa-check-circle mr-2" style={{ color: `#${paleta[7]}` }}></i>
-                <div className="text-sm uppercase" style={{ color: `#${paleta[7]}` }}>
+                <i className="fas fa-check-circle mr-2" style={{ color: `#${paleta[2]}` }}></i>
+                <div className="text-sm uppercase" style={{ color: `#${paleta[2]}` }}>
                   Tareas Completadas
                 </div>
               </div>
-              <div className="text-4xl font-bold mt-2" style={{ color: determinarOscuro(`#${paleta[0]}`) ? "#ffffff" : "#000000" }}>
+              <div className="text-4xl font-bold mt-2" style={{ color: determinarOscuro(`#${paleta[10]}`) ? "#ffffff" : "#000000" }}>
                 23
               </div>
-              <div className="text-sm mt-2 mb-4" style={{ color: `#${paleta[7]}` }}>
+              <div className="text-sm mt-2 mb-4" style={{ color: `#${paleta[2]}` }}>
                 Tareas completadas hoy
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2.5">
@@ -154,21 +154,21 @@ function Examples({ paleta }) {
             </div>
 
             {/* <!-- Card 7 --> */}
-            <div style={{ backgroundColor: `#${paleta[0]}` }} className="rounded-lg shadow p-6 border border-gray-200">
+            <div style={{ backgroundColor: `#${paleta[10]}` }} className="rounded-lg shadow p-6 border border-gray-200">
               <div className="flex items-center">
-                <i className="fas fa-calendar-alt mr-2" style={{ color: `#${paleta[7]}` }}></i>
-                <div className="text-sm uppercase" style={{ color: `#${paleta[7]}` }}>
+                <i className="fas fa-calendar-alt mr-2" style={{ color: `#${paleta[2]}` }}></i>
+                <div className="text-sm uppercase" style={{ color: `#${paleta[2]}` }}>
                   Eventos Próximos
                 </div>
               </div>
-              <hr className="my-4" style={{ borderColor: `#${paleta[7]}` }} />
-              <div className="text-lg font-bold" style={{ color: determinarOscuro(`#${paleta[0]}`) ? "#ffffff" : "#000000" }}>
+              <hr className="my-4" style={{ borderColor: `#${paleta[2]}` }} />
+              <div className="text-lg font-bold" style={{ color: determinarOscuro(`#${paleta[10]}`) ? "#ffffff" : "#000000" }}>
                 Reunión Anual
               </div>
-              <div className="text-sm mt-2" style={{ color: `#${paleta[7]}` }}>
+              <div className="text-sm mt-2" style={{ color: `#${paleta[2]}` }}>
                 Fecha: 25 de Mayo
               </div>
-              <div className="text-sm mt-2" style={{ color: `#${paleta[7]}` }}>
+              <div className="text-sm mt-2" style={{ color: `#${paleta[2]}` }}>
                 Hora: 10:00 AM
               </div>
             </div>
@@ -190,18 +190,18 @@ function Examples({ paleta }) {
             </div>
 
             {/* <!-- Card 9 --> */}
-            <div style={{ backgroundColor: `#${paleta[0]}` }} className="rounded-lg shadow p-6 border border-gray-200">
+            <div style={{ backgroundColor: `#${paleta[10]}` }} className="rounded-lg shadow p-6 border border-gray-200">
               <div className="flex items-center">
-                <i className="fas fa-envelope mr-2" style={{ color: `#${paleta[7]}` }}></i>
-                <div className="text-sm uppercase" style={{ color: `#${paleta[7]}` }}>
+                <i className="fas fa-envelope mr-2" style={{ color: `#${paleta[2]}` }}></i>
+                <div className="text-sm uppercase" style={{ color: `#${paleta[2]}` }}>
                   Mensajes Recientes
                 </div>
               </div>
-              <hr className="my-4" style={{ borderColor: `#${paleta[7]}` }} />
-              <div className="text-lg font-bold" style={{ color: determinarOscuro(`#${paleta[0]}`) ? "#ffffff" : "#000000" }}>
+              <hr className="my-4" style={{ borderColor: `#${paleta[2]}` }} />
+              <div className="text-lg font-bold" style={{ color: determinarOscuro(`#${paleta[10]}`) ? "#ffffff" : "#000000" }}>
                 Tienes 5 mensajes nuevos
               </div>
-              <div className="text-sm mt-2" style={{ color: `#${paleta[7]}` }}>
+              <div className="text-sm mt-2" style={{ color: `#${paleta[2]}` }}>
                 Revisa tu bandeja de entrada para más detalles.
               </div>
             </div>

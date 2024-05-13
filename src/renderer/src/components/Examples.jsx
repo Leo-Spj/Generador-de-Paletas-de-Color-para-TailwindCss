@@ -20,37 +20,37 @@ function Examples({ paleta }) {
 
             {/* <!-- Card 1 --> */}
             <div style={{ backgroundColor: `#${paleta[0]}` }} className="rounded-lg shadow p-6">
-              <div className="text-sm uppercase" style={{ color: determinarOscuro(`#${paleta[0]}`) ? "#ffffff" : "#000000" }}>
+              <div className="text-sm uppercase" style={{ color: determinarOscuro(`#${paleta[0]}`) ? `#${paleta[0]}` : `#${paleta[10]}` }}>
                 Clientela
               </div>
-              <div className="text-6xl font-bold mt-2" style={{ color: determinarOscuro(`#${paleta[0]}`) ? "#ffffff" : "#000000" }}>
+              <div className="text-6xl font-bold mt-2" style={{ color: determinarOscuro(`#${paleta[0]}`) ? `#${paleta[0]}` : `#${paleta[10]}` }}>
                 1.553
                 <i className="fas fa-arrow-up"></i>
               </div>
-              <div className="text-sm mt-2" style={{ color: determinarOscuro(`#${paleta[0]}`) ? "#ffffff" : "#000000" }}>
+              <div className="text-sm mt-2" style={{ color: determinarOscuro(`#${paleta[0]}`) ? `#${paleta[0]}` : `#${paleta[10]}` }}>
                 Nuevos clientes en los últimos 30 días
               </div>
             </div>
 
             {/* <!-- Card 2 --> */}
             <div className="bg-white p-8 rounded-lg shadow">
-              <div className="font-bold" style={{ color: determinarOscuro(`#${paleta[0]}`) ? "#000000" : "#000000" }}>
+              <div className="font-bold" style={{ color: determinarOscuro(`#${paleta[0]}`) ? `#${paleta[0]}` : `#${paleta[10]}` }}>
                 Calendar
               </div>
               <div className="grid grid-cols-7 gap-1 text-center text-sm py-4">
                 {daysOfWeek.map(day => (
-                  <div key={day} style={{ color: determinarOscuro(`#${paleta[2]}`) ? "#000000" : "#000000" }}>{day}</div>
+                  <div key={day} style={{ color: determinarOscuro(`#${paleta[2]}`) ? `#${paleta[0]}` : `#${paleta[10]}` }}>{day}</div>
                 ))}
                 <div className="col-span-7 border-t mt-2"></div>
                 {daysOfMonth.map(day => (
-                  <div key={day} className={day === 1 ? "col-start-2" : ""} style={{ color: determinarOscuro(`#${paleta[2]}`) ? "#000000" : "#000000" }}>{day}</div>
+                  <div key={day} className={day === 1 ? "col-start-2" : ""} style={{ color: determinarOscuro(`#${paleta[2]}`) ? `#${paleta[0]}` : `#${paleta[10]}` }}>{day}</div>
                 ))}
               </div>
               <div className="col-span-7 border-t mt-2"></div>
               <button
                 style={{
                   backgroundColor: `#${paleta[2]}`,
-                  color: determinarOscuro(`#${paleta[2]}`) ? "#ffffff" : "#000000"
+                  color: determinarOscuro(`#${paleta[2]}`) ? `#${paleta[0]}` : `#${paleta[10]}`
                 }}
                 className="mt-4 px-4 py-2 rounded hover:bg-orange-300 transition duration-300"
               >
@@ -65,7 +65,7 @@ function Examples({ paleta }) {
                 <div style={{ backgroundColor: `#${paleta[2]}` }} className="p-4 rounded-lg flex justify-between items-center relative">
                   <div className="absolute left-0 top-0 bottom-0 w-1" style={{ backgroundColor: `#${paleta[7]}` }}></div>
                   <div className="pl-4">
-                    <div className="font-semibold" style={{ color: determinarOscuro(`#${paleta[2]}`) ? "#ffffff" : "#000000" }}>Design system meeting</div>
+                    <div className="font-semibold" style={{ color: determinarOscuro(`#${paleta[2]}`) ? `#${paleta[0]}` : `#${paleta[10]}` }}>Design system meeting</div>
                     <div className="text-gray-700 text-sm">9 - 10 AM</div>
                   </div>
                   <i className="fas fa-ellipsis-h text-gray-600"></i>
@@ -73,7 +73,7 @@ function Examples({ paleta }) {
                 <div style={{ backgroundColor: `#${paleta[2]}` }} className="p-4 rounded-lg flex justify-between items-center relative">
                   <div className="absolute left-0 top-0 bottom-0 w-1" style={{ backgroundColor: `#${paleta[7]}` }}></div>
                   <div className="pl-4">
-                    <div className="font-semibold" style={{ color: determinarOscuro(`#${paleta[2]}`) ? "#ffffff" : "#000000" }}>Lunch</div>
+                    <div className="font-semibold" style={{ color: determinarOscuro(`#${paleta[2]}`) ? `#${paleta[0]}` : `#${paleta[10]}` }}>Lunch</div>
                     <div className="text-gray-700 text-sm">1 - 2 PM</div>
                   </div>
                   <i className="fas fa-ellipsis-h text-gray-600"></i>
@@ -81,7 +81,7 @@ function Examples({ paleta }) {
                 <div style={{ backgroundColor: `#${paleta[2]}` }} className="p-4 rounded-lg flex justify-between items-center relative">
                   <div className="absolute left-0 top-0 bottom-0 w-1" style={{ backgroundColor: `#${paleta[7]}` }}></div>
                   <div className="pl-4">
-                    <div className="font-semibold" style={{ color: determinarOscuro(`#${paleta[2]}`) ? "#ffffff" : "#000000" }}>Design review</div>
+                    <div className="font-semibold" style={{ color: determinarOscuro(`#${paleta[2]}`) ? `#${paleta[0]}` : `#${paleta[10]}` }}>Design review</div>
                     <div className="text-gray-700 text-sm">3 - 4 PM</div>
                   </div>
                   <i className="fas fa-ellipsis-h text-gray-600"></i>
@@ -97,7 +97,7 @@ function Examples({ paleta }) {
                   Progreso del Proyecto
                 </div>
               </div>
-              <div className="text-4xl font-bold mt-2" style={{ color: determinarOscuro(`#${paleta[0]}`) ? "#ffffff" : "#000000" }}>
+              <div className="text-4xl font-bold mt-2" style={{ color: determinarOscuro(`#${paleta[0]}`) ? `#${paleta[0]}` : `#${paleta[10]}` }}>
                 75%
               </div>
               <div className="text-sm mt-2 mb-4" style={{ color: `#${paleta[7]}` }}>
@@ -120,7 +120,7 @@ function Examples({ paleta }) {
                   Tareas Completadas
                 </div>
               </div>
-              <div className="text-4xl font-bold mt-2" style={{ color: determinarOscuro(`#${paleta[10]}`) ? "#ffffff" : "#000000" }}>
+              <div className="text-4xl font-bold mt-2" style={{ color: determinarOscuro(`#${paleta[10]}`) ? `#${paleta[0]}` : `#${paleta[10]}` }}>
                 23
               </div>
               <div className="text-sm mt-2 mb-4" style={{ color: `#${paleta[2]}` }}>
@@ -142,7 +142,7 @@ function Examples({ paleta }) {
                 </div>
               </div>
               <hr className="my-4" style={{ borderColor: `#${paleta[7]}` }} />
-              <div className="text-2xl font-bold" style={{ color: determinarOscuro(`#${paleta[0]}`) ? "#ffffff" : "#000000" }}>
+              <div className="text-2xl font-bold" style={{ color: determinarOscuro(`#${paleta[0]}`) ? `#${paleta[0]}` : `#${paleta[10]}`}}>
                 John Doe
               </div>
               <div className="text-sm mt-2" style={{ color: `#${paleta[7]}` }}>
@@ -162,7 +162,7 @@ function Examples({ paleta }) {
                 </div>
               </div>
               <hr className="my-4" style={{ borderColor: `#${paleta[2]}` }} />
-              <div className="text-lg font-bold" style={{ color: determinarOscuro(`#${paleta[10]}`) ? "#ffffff" : "#000000" }}>
+              <div className="text-lg font-bold" style={{ color: determinarOscuro(`#${paleta[10]}`) ? `#${paleta[0]}` : `#${paleta[10]}`}}>
                 Reunión Anual
               </div>
               <div className="text-sm mt-2" style={{ color: `#${paleta[2]}` }}>
@@ -181,7 +181,7 @@ function Examples({ paleta }) {
                 </div>
               </div>
               <hr className="my-4" style={{ borderColor: `#${paleta[7]}` }} />
-              <div className="text-4xl font-bold" style={{ color: determinarOscuro(`#${paleta[0]}`) ? "#ffffff" : "#000000" }}>
+              <div className="text-4xl font-bold" style={{ color: determinarOscuro(`#${paleta[0]}`) ? `#${paleta[0]}` : `#${paleta[10]}` }}>
                 $12,345
               </div>
               <div className="text-sm mt-2" style={{ color: `#${paleta[7]}` }}>
@@ -198,7 +198,7 @@ function Examples({ paleta }) {
                 </div>
               </div>
               <hr className="my-4" style={{ borderColor: `#${paleta[2]}` }} />
-              <div className="text-lg font-bold" style={{ color: determinarOscuro(`#${paleta[10]}`) ? "#ffffff" : "#000000" }}>
+              <div className="text-lg font-bold" style={{ color: determinarOscuro(`#${paleta[10]}`) ? `#${paleta[0]}` : `#${paleta[10]}` }}>
                 Tienes 5 mensajes nuevos
               </div>
               <div className="text-sm mt-2" style={{ color: `#${paleta[2]}` }}>

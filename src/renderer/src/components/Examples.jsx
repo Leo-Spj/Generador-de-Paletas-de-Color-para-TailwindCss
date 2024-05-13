@@ -115,7 +115,7 @@ function Examples({ paleta }) {
                   Tareas Completadas
                 </div>
               </div>
-              <div className="text-4xl font-bold mt-2" style={{ color: determinarOscuro(`#${paleta[10]}`) ? `#${paleta[0]}` : `#${paleta[10]}` }}>
+              <div className="text-4xl font-bold mt-2" style={{ color: determinarOscuro(`#${paleta[10]}`) ? `#${paleta[0]}` : `#${paleta[0]}` }}>
                 23
               </div>
               <div className="text-sm mt-2 mb-4" style={{ color: `#${paleta[2]}` }}>
@@ -157,7 +157,7 @@ function Examples({ paleta }) {
                 </div>
               </div>
               <hr className="my-4" style={{ borderColor: `#${paleta[2]}` }} />
-              <div className="text-lg font-bold" style={{ color: determinarOscuro(`#${paleta[10]}`) ? `#${paleta[0]}` : `#${paleta[10]}`}}>
+              <div className="text-lg font-bold" style={{ color: determinarOscuro(`#${paleta[10]}`) ? `#${paleta[0]}` : `#${paleta[0]}`}}>
                 Reunión Anual
               </div>
               <div className="text-sm mt-2" style={{ color: `#${paleta[2]}` }}>
@@ -196,7 +196,7 @@ function Examples({ paleta }) {
                 </div>
               </div>
               <hr className="my-4" style={{ borderColor: `#${paleta[2]}` }} />
-              <div className="text-lg font-bold" style={{ color: determinarOscuro(`#${paleta[10]}`) ? `#${paleta[0]}` : `#${paleta[10]}` }}>
+              <div className="text-lg font-bold" style={{ color: determinarOscuro(`#${paleta[10]}`) ? `#${paleta[0]}` : `#${paleta[0]}` }}>
                 Tienes 5 mensajes nuevos
               </div>
               <div className="text-sm mt-2" style={{ color: `#${paleta[2]}` }}>

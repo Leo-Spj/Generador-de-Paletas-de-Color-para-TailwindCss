@@ -92,24 +92,19 @@ function Examples({ paleta }) {
             {/* <!-- Card 4 --> */}
             <div style={{ backgroundColor: `#${paleta[0]}` }} className="rounded-lg shadow p-6 border border-gray-200">
               <div className="flex items-center">
-                <i className="fas fa-tasks mr-2" style={{ color: `#${paleta[7]}` }}></i>
+                <i className="fas fa-chart-line mr-2" style={{ color: `#${paleta[7]}` }}></i>
                 <div className="text-sm uppercase" style={{ color: `#${paleta[7]}` }}>
-                  Progreso del Proyecto
+                  Ventas del Mes
                 </div>
               </div>
-              <div className="text-4xl font-bold mt-2" style={{ color: determinarOscuro(`#${paleta[0]}`) ? `#${paleta[0]}` : `#${paleta[10]}` }}>
-                75%
+              <hr className="my-4" style={{ borderColor: `#${paleta[7]}` }} />
+              <div className="text-4xl font-bold" style={{ color: determinarOscuro(`#${paleta[0]}`) ? `#${paleta[0]}` : `#${paleta[10]}` }}>
+                $12,345
               </div>
-              <div className="text-sm mt-2 mb-4" style={{ color: `#${paleta[7]}` }}>
-                Completado
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-2.5">
-                <div className="h-2.5 rounded-full" style={{ width: "75%", backgroundColor: `#${paleta[5]}` }}></div>
+              <div className="text-sm mt-2" style={{ color: `#${paleta[7]}` }}>
+                Hasta ahora
               </div>
             </div>
-
-
-
 
 
             {/* <!-- Card 5 --> */}
@@ -172,20 +167,23 @@ function Examples({ paleta }) {
                 Hora: 10:00 AM
               </div>
             </div>
+
             {/* <!-- Card 8 --> */}
             <div style={{ backgroundColor: `#${paleta[0]}` }} className="rounded-lg shadow p-6 border border-gray-200">
               <div className="flex items-center">
-                <i className="fas fa-chart-line mr-2" style={{ color: `#${paleta[7]}` }}></i>
+                <i className="fas fa-tasks mr-2" style={{ color: `#${paleta[7]}` }}></i>
                 <div className="text-sm uppercase" style={{ color: `#${paleta[7]}` }}>
-                  Ventas del Mes
+                  Progreso del Proyecto
                 </div>
               </div>
-              <hr className="my-4" style={{ borderColor: `#${paleta[7]}` }} />
-              <div className="text-4xl font-bold" style={{ color: determinarOscuro(`#${paleta[0]}`) ? `#${paleta[0]}` : `#${paleta[10]}` }}>
-                $12,345
+              <div className="text-4xl font-bold mt-2" style={{ color: determinarOscuro(`#${paleta[0]}`) ? `#${paleta[0]}` : `#${paleta[10]}` }}>
+                75%
               </div>
-              <div className="text-sm mt-2" style={{ color: `#${paleta[7]}` }}>
-                Hasta ahora
+              <div className="text-sm mt-2 mb-4" style={{ color: `#${paleta[7]}` }}>
+                Completado
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-2.5">
+                <div className="h-2.5 rounded-full" style={{ width: "75%", backgroundColor: `#${paleta[5]}` }}></div>
               </div>
             </div>
 

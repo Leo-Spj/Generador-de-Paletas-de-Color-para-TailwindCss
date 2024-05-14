@@ -11,7 +11,7 @@ function PaletaColor({paleta}) {
 
         {paleta.slice(1, -1).map((color, index) => (
           <div key={index} className={`p-4 min-w-20 rounded-lg text-center`} style={{ backgroundColor: `#${color}` }}>
-            <p className={`font-semibold`} style={{ color: determinarOscuro("#"+color) ? "#ffffff" : "#000000" }}> {index * 100} </p>
+            <p className={`font-semibold`} style={{ color: determinarOscuro("#"+color) ? "#ffffff" : "#000000" }}> {index * 100 + 100} </p>
             <p className="text-sm mt-2" style={{ color: determinarOscuro("#"+color) ? "#ffffff" : "#000000" }}> {color} </p>
           </div>
         ))}

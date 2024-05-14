@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unknown-property */
-/* eslint-disable prettier/prettier */
 import determinarOscuro from "./DeterminarOscuro"
 
 function Examples({ paleta }) {
